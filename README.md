@@ -28,5 +28,11 @@ The following image depicts the components of BreakingPoint Virtual Edition.
 
 ![alt text](https://raw.githubusercontent.com/ibenrodriguez/ravello-breakingpoint-demo/master/ravello-ixia-bpve-demo.png "Ixia Breaking Point Demo on Ravello Drawing")
 
-Setup Notes: 
-http://wiki.openwrt.org/doc/uci/network
+#Setup Notes: 
+
+- http://wiki.openwrt.org/doc/uci/network
+- Ravello's service currently does not support DHCP for ESXi's nested vms.
+  - As you can see, for now you can either use a static IP's for the ESXi or create your own DHCP server for this purpose. 
+  - https://www.ravellosystems.com/blog/guest-vm-connectivity-setup/
+  - And how to create your own DHCP server:
+  - https://www.ravellosystems.com/blog/configure-dhcp-esxi/
