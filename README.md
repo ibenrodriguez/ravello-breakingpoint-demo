@@ -31,8 +31,51 @@ The following image depicts the components of BreakingPoint Virtual Edition.
 #Setup Notes: 
 
 - http://wiki.openwrt.org/doc/uci/network
+  - run this command after making changes to /etc/config/network
+  /etc/init.d/network reload
+  root@OpenWrt:~# cat /etc/config/network
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config interface 'lan'
+	option ifname 'eth0'
+	option proto 'static'
+	option ipaddr '10.10.0.10'
+	option netmask '255.255.0.0'
+        option gateway '10.10.0.1'
+ 	option dns '8.8.8.8'
+config interface 'west'
+	option ifname 'eth1'
+	option proto 'static'
+	option ipaddr '10.20.0.10'
+	option netmask '255.255.0.0'
+
+config interface 'east'
+	option ifname 'eth2'
+	option proto 'static'
+	option ipaddr '10.30.0.10'
+	option netmask '255.255.0.0'
+
+
+root@OpenWrt:~# /etc/init.d/network reload
+
+- LuCI Essentials - Installing LuCI on uHTTPd
+This installs the essentials of the Web User Interface LuCI. See "opkg update && opkg list luci-*" for all available packages to administer OpenWrt through LuCI.
+  - opkg update
+  - opkg install luci-ssl # enable https for luci
 - Ravello's service currently does not support DHCP for ESXi's nested vms.
   - As you can see, for now you can either use a static IP's for the ESXi or create your own DHCP server for this purpose. 
   - https://www.ravellosystems.com/blog/guest-vm-connectivity-setup/
   - And how to create your own DHCP server:
   - https://www.ravellosystems.com/blog/configure-dhcp-esxi/
+  - we are using OpenWRT for the local DHCP server and device under test L3 rotuer. You can replace this with your own device.
+- Windows 7 VM used to build the environment
+  - VMware vSphere C++ Desktop Client installed to manage ESXi host
+  - Download the Ixia Breaking Point VE OVA Image
+  - Import the OVA to the ESXi host
+  - Putty SSH Client installed
+
