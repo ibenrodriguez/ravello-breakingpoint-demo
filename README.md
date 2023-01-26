@@ -1,7 +1,7 @@
 # ravello-breakingpoint-demo
 Demo files showing Ixia BreakingPoint Virtual with OpenWRT Reouter as Device Under Test
 
-#Overview
+# Overview
                     
 BreakingPoint Virtual Edition is a software-based test platform that enables you to run a BreakingPoint vController and traffic generation blades on a virtual chassis.
                     
@@ -13,7 +13,7 @@ BreakingPoint Virtual Edition offers the following benefits:
 - Rapid and Easy Deployment - Virtual Ixia ports can be instantiated as necessary, used to generate traffic, and then destroyed when no longer needed.
 - BreakingPoint Virtual Edition is delivered as a pre-configured .ova template.    
 
-#Basic Elements
+# Basic Elements
 
 The basic elements involved in the BreakingPoint Virtual Edition are:
 
@@ -28,10 +28,12 @@ The following image depicts the components of BreakingPoint Virtual Edition.
 
 ![alt text](https://raw.githubusercontent.com/ibenrodriguez/ravello-breakingpoint-demo/master/ravello-ixia-bpve-demo.png "Ixia Breaking Point Demo on Ravello Drawing")
 
-#Setup Notes: 
+# Setup Notes: 
 
 - http://wiki.openwrt.org/doc/uci/network
   - run this command after making changes to /etc/config/network
+
+```
   /etc/init.d/network reload
   root@OpenWrt:~# cat /etc/config/network
 
@@ -62,6 +64,7 @@ config interface 'east'
 
 
 root@OpenWrt:~# /etc/init.d/network reload
+```
 
 - LuCI Essentials - Installing LuCI on uHTTPd
 This installs the essentials of the Web User Interface LuCI. See "opkg update && opkg list luci-*" for all available packages to administer OpenWrt through LuCI.
