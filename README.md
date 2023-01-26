@@ -1,8 +1,7 @@
 # ravello-breakingpoint-demo
-Demo files showing Ixia BreakingPoint Virtual with OpenWRT Reouter as Device Under Test
+Demo files showing Ixia BreakingPoint Virtual with OpenWRT Router as Device Under Test DUT
 
 # Overview
-                    
 BreakingPoint Virtual Edition is a software-based test platform that enables you to run a BreakingPoint vController and traffic generation blades on a virtual chassis.
                     
 BreakingPoint Virtual Edition offers the following benefits:
@@ -14,7 +13,6 @@ BreakingPoint Virtual Edition offers the following benefits:
 - BreakingPoint Virtual Edition is delivered as a pre-configured .ova template.    
 
 # Basic Elements
-
 The basic elements involved in the BreakingPoint Virtual Edition are:
 
 - A simple installer based on a single OVA image or installation script.
@@ -29,7 +27,6 @@ The following image depicts the components of BreakingPoint Virtual Edition.
 ![alt text](https://raw.githubusercontent.com/ibenrodriguez/ravello-breakingpoint-demo/master/ravello-ixia-bpve-demo.png "Ixia Breaking Point Demo on Ravello Drawing")
 
 # Setup Notes: 
-
 - http://wiki.openwrt.org/doc/uci/network
   - run this command after making changes to /etc/config/network
 
